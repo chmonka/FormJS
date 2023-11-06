@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,21 +8,35 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form id="main-form" method="post" onsubmit="return checkForm(this)">
-        <label for="name">Имя:</label>
-        <input type="text" name="name" placeholder="Имя" id="nameForm">
-        <label for="password">Пароль:</label>
-        <input type="password" name="pass" placeholder="Пароль" id="passwordForm">
-        <label for="repass">Проверка пароля:</label>
-        <input type="password" name="repass" placeholder="Проверка пароля" id="repeatPasswordForm">
-        <span>Пол:</span>
-        <input type="radio" name="state" value="Мужской" id="male">    
-        <label for="name">Мужской</label>
-        <input type="radio" name="state" value="Женский" id="female">
-        <label for="name">Женский</label>
-        <span id="error" style="color:red"></span>
-        <input type="submit" name="sumbit" value="Готово">
-    </form>
+    <div class="container">
+        <form id="form" action="/">
+            <h2>Регистрация</h2>
+            <div class="input-form">
+                <label for="username"></label>
+                <input type="text" id="username" name="username" placeholder="Имя" > 
+                <div class="error"></div>
+            </div>
+            <div class="input-form">
+                <label for="email"></label>
+                <input type="text" id="email" name="email" placeholder="E-mail" >
+                <div class="error"></div>
+            </div>
+            <div class="input-form"> 
+                <label for="password"></label>
+                <input type="password" id="password" name="password"  placeholder="Пароль" >
+                <div class="error"></div>
+            </div>
+            <div class="input-form" >
+                <label for="repa-password"></label>
+                <input type="password" id="reapassword" name="repa-password" placeholder="Повторить пароль" > 
+                <div class="error"></div>
+            </div>
+
+                <button type="submit">Отправить</button>
+
+        </form>
+    </div>
     <script src="js/script.js"></script>
 </body>
+
 </html>
